@@ -1,23 +1,25 @@
 # Neural Network to Stocks Volume Prediction
 
+This project involves the development of a neural network-based system to predict the volume of stock trading. The structure of the project is as follows:
 
-projeto_predicao_volume/
-│
-├── data/                 # Diretório para armazenar dados brutos e processados
-│
-├── notebooks/            # Jupyter notebooks para exploração e análise de dados
-│
-├── src/                  # Código-fonte do projeto
-│   ├── __init__.py       # Torna src um pacote Python
-│   ├── data.py           # Scripts para carregar e pré-processar dados
-│   ├── features.py       # Scripts para engenharia de features
-│   ├── model.py          # Definições de modelo de rede neural
-│   ├── train.py          # Script para treinamento do modelo
-│   └── evaluate.py       # Script para avaliação e teste do modelo
-│
-├── tests/                # Testes unitários
-│   ├── __init__.py       # Torna tests um pacote Python
-│   └── test_data.py      # Testes para o módulo de dados
-│
-├── requirements.txt      # Dependências do projeto
-└── README.md             # Documentação do projeto
+- `data/`: Directory to store raw and processed data.
+- `notebooks/`: Jupyter notebooks for data exploration and analysis.
+- `src/`: Source code of the project.
+    - `__init__.py`: Makes `src` a Python package.
+    - `data.py`: Scripts to load and preprocess data.
+    - `features.py`: Scripts for feature engineering.
+    - `model.py`: Neural network model definitions.
+    - `train.py`: Script for model training.
+    - `evaluate.py`: Script for evaluation and testing the model.
+- `tests/`: Unit tests.
+    - `__init__.py`: Makes `tests` a Python package.
+    - `test_data.py`: Tests for the data module.
+- `star_project/`: Folder and files builder.
+
+## Requirements
+
+Project dependencies are listed in the `requirements.txt` file.
+
+## Documentation
+
+For more information on project goals, data sources, and methodologies, refer to the documentation provided within each module and notebook.

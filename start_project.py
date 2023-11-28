@@ -1,8 +1,30 @@
 import os
+"""This code is a starter point to generate a more organized code. 
+Just create folders and files base on a set dictionary and path, don't produce any external influence in the code.
+"""
+
+def create_structure(base_path:str, structure:dict):
+    """main function to map the os.path into folders and files
+
+    Args:
+        base_path (str): os.path string
+        structure (dict): project structure into dictionarys
+    """
+    for name, value in structure.items():
+        path = os.path.join(base_path, name)
+        if isinstance(value, dict):
+            os.makedirs(path, exist_ok=True)
+            create_structure(path, value)  # Recursive call for subdirectories
+        else:
+            if not os.path.isfile(path):  # Check if file does not already exist
+                with open(path, 'w') as file:
+                    file.write(value)
+            else:
+                print(f"File {path} already exists. Skipping...")
 
 # Define the project structure in a dictionary format
 project_structure = {
-    "projeto_predicao_volume": {
+    
         "data": {},
         "notebooks": {},
         "src": {
@@ -20,28 +42,9 @@ project_structure = {
         "requirements.txt": "# Project dependencies\n",
         "README.md": "# Project Documentation\n",
     }
-}
-
-
-
-# Function to create directories and files based on the project structure
-def create_structure(base_path, structure):
-    for name, value in structure.items():
-        path = os.path.join(base_path, name)
-        if isinstance(value, dict):
-            os.makedirs(path, exist_ok=True)
-            create_structure(path, value)  # Recursive call for subdirectories
-        else:
-            if not os.path.isfile(path):  # Check if file does not already exist
-                with open(path, 'w') as file:
-                    file.write(value)
-            else:
-                print(f"File {path} already exists. Skipping...")
 
 # Base path for creating the structure
 base_path = os.getcwd()
-
-# Create the project structure
 create_structure(base_path, project_structure)
 
 # Verify the structure by listing the contents
@@ -55,6 +58,3 @@ for root, dirs, files in os.walk(base_path + "/Neural_Network_to_Stocks_Volume_P
         file_path = os.path.join(root, name)
         created_paths.append(file_path)
         print(file_path)
-
-# Output created paths to a variable
-created_paths
