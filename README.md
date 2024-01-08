@@ -15,7 +15,7 @@ This project involves the development of a neural network-based system to predic
     - `__init__.py`: Makes `tests` a Python package.
     - `test_data.py`: Tests for the data module.
 - `star_project/`: Folder and files builder.
-
+- `main.py`: Main python file.
 ## Requirements
 
 Project dependencies are listed in the `requirements.txt` file.
