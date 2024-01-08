@@ -41,6 +41,7 @@ project_structure = {
         },
         "requirements.txt": "# Project dependencies\n",
         "README.md": "# Project Documentation\n",
+        "main.py":'# Main Python Project'
     }
 
 # Base path for creating the structure
